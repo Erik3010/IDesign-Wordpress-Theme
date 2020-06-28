@@ -1,0 +1,370 @@
+/*
+Theme name: IDesign
+Author: Erik
+Version: 1.0
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --primary: #3185FC;
+}
+
+.container {
+    /* width: 1280px; */
+    width: 85%;
+    margin: auto;
+}
+
+.btn,
+section.contact input[type='submit'] {
+    background: var(--primary);
+    border: none;
+    padding: 12px 22px;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 0px 10px 38px rgba(49, 133, 252, .2);
+    cursor: pointer;
+}
+
+.btn:hover,
+section.contact input[type='submit']:hover {
+    background: #1570f2;
+}
+
+/* navbar */
+header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    z-index: 99999;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo h1 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.8em;
+    letter-spacing: 1.5px;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    opacity: .8;
+}
+
+nav ul li .hamburger {
+    cursor: pointer;
+}
+
+.hamburger .h-line {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin: 5px;
+    border-radius: 10px;
+}
+/* end navbar */
+
+/* sidebar */
+.sidebar {
+    width: 350px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    padding: 25px;
+    z-index: 99999;
+    background: var(--primary);
+    transition: .2s ease-in-out;
+    box-shadow: 10px 10px 20px rgba(93, 93, 93, 0.2);
+    transform: translateX(-100%);
+}
+
+.active {
+    transform: translateX(0);
+}
+/* end sidebar */
+
+/* banner */
+.banner {
+    width: 100%;
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.banner h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+.banner button {
+    margin-top: 50px;
+}
+/* end banner */
+
+/* section */
+section {
+    padding: 100px 0;
+}
+
+section:nth-child(even) {
+    background: var(--primary);
+    color: #fff;
+}
+
+section:nth-child(even) .section-title .line {
+    background: #fff;
+}
+
+.section-title {
+    margin: 0 0 100px;
+    text-align: center;
+}
+
+section .section-title .line {
+    background: var(--primary);
+    height: 5px;
+    width: 80px;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+}
+
+section .section-title h1 {
+    font-size: 2.8em;
+}
+
+section .section-title p {
+    font-size: 13px;
+    font-weight: 400;
+}
+/* section */
+
+/* section about us */
+.about-us .section-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 70px;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+.about-img img:hover {
+    box-shadow: 0px 10px 38px rgba(39, 38, 38, 0.2);
+}
+
+.about-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-text h2 {
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    line-height: 2;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.about-text button {
+    margin-top: 30px;
+    margin-right: auto;
+}
+/* section about us */
+
+/* section list of designer */
+.list-designer .section-content{
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card {
+    width: 21%;
+    margin: 0 18px;
+}
+
+.card-img {
+    border-radius: 7px;
+    height: 150px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(99, 99, 99, 0.2);
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    transition: .2s ease-in-out;
+    z-index: -1;
+}
+
+.card-img img:hover {
+    transform: scale(1.1);
+}
+
+.card-body {
+    margin: 12px 2px;
+}
+
+.card-body p {
+    color: #cecece;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.card-body h5 {
+    font-size: 1.1em;
+    margin: 3px 0;
+}
+/* end section list of designer */
+
+/* section contact us */
+section.contact {
+    background: white;
+    color: #000;
+}
+
+section.contact .section-title .line {
+    background: var(--primary);
+}
+
+.contact .section-content form {
+    width: 65%;
+}
+
+/* .contact .section-content .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 25px 0;
+} */
+
+section.contact label {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+section.contact input[type='text'],
+section.contact input[type='email'],
+section.contact textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 4px;
+    border: 1px solid #dadada;
+    font-size: 14px;
+    box-shadow: 0 10px 20px rgba(187, 187, 187, 0.2);
+    margin-bottom: 20px;
+}
+
+section.contact input[type='text']:focus,
+section.contact input[type='email']:focus,
+section.contact textarea:focus {
+    border: 1px solid var(--primary);
+}
+/* end section contact us */
+
+/* contact info */
+.contact-info .section-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact-info .section-content > div {
+    display: flex;
+}
+
+.contact-info .section-content > div > p {
+    font-size: 14px;
+}
+.contact-info .section-content > div > p:last-child {
+    font-weight: 600;
+    margin-left: 12px;
+}
+/* end contact info */
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 80px 0;
+    flex-direction: column;
+    text-align: center;
+    background: var(--primary);
+    color: white;
+}
+
+.social-media > div {
+    display: flex;
+    justify-content: center;
+}
+
+.norm_row {
+    display: flex;
+    justify-content: center;
+}
+
+.copyright p {
+    font-weight: 600;
+}
+/* end footer */
